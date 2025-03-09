@@ -1,12 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `Player` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-DROP TABLE "Player";
-
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
@@ -14,9 +5,12 @@ CREATE TABLE "User" (
     "email" TEXT NOT NULL,
     "cpf" TEXT NOT NULL,
     "password" TEXT NOT NULL,
+    "teste" TEXT NOT NULL,
     "stripeSubscriptionStatus" TEXT,
     "stripeCustumerId" TEXT,
     "stripeSubscriptionId" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
